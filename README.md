@@ -1,219 +1,238 @@
-# 🧮 Number Facts App
+git # Number Facts App
 
-Современное веб-приложение для получения интересных фактов о числах, построенное с использованием Next.js 15, Redux Toolkit, RTK Query и TypeScript.
+A modern, multilingual Next.js application that provides interesting facts about numbers. Built with TypeScript, Redux Toolkit, RTK Query, and next-intl for internationalization.
 
-## ✨ Особенности
+## 🌟 Features
 
-### 🎯 Основной функционал
+- **Multi-language Support**: English, Russian, and Uzbek
+- **Number Facts**: Get interesting facts about any number
+- **Multiple Categories**: Trivia, Math, and Date facts
+- **Random Facts**: Generate random number facts
+- **Favorites System**: Save your favorite facts
+- **Search History**: Track your previous searches
+- **Dark/Light Theme**: Toggle between themes
+- **Responsive Design**: Works on all devices
+- **Offline Support**: Fallback facts when API is unavailable
 
-- **Поиск фактов о числах** - введите любое число и получите интересный факт
-- **Случайные факты** - получите факт о случайном числе
-- **Множественные категории** - trivia, math, date
-- **RTK Query** - мощная система кэширования и управления состоянием API
+## 🚀 Tech Stack
 
-### 🎨 Пользовательский интерфейс
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **State Management**: Redux Toolkit + RTK Query
+- **Internationalization**: next-intl
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Icons**: Lucide React
+- **Notifications**: Sonner
 
-- **Адаптивный дизайн** - работает на всех устройствах
-- **Темная/светлая тема** - с поддержкой системных настроек
-- **Современный UI** - построен на shadcn/ui компонентах
-- **Плавные анимации** - улучшенный пользовательский опыт
+## 📦 Installation
 
-### 💾 Управление состоянием
+1. **Clone the repository**
 
-- **Redux Toolkit** - современное управление состоянием
-- **RTK Query** - автоматическое кэширование и синхронизация данных
-- **Локальное хранение** - избранное и история сохраняются в localStorage
-- **Типизация** - полная поддержка TypeScript
+   ```bash
+   git clone <repository-url>
+   cd number-fact
+   ```
 
-### 🔄 Дополнительные возможности
+2. **Install dependencies**
 
-- **Избранное** - сохраняйте понравившиеся факты
-- **История поиска** - отслеживайте ваши запросы
-- **Поделиться** - делитесь фактами с друзьями
-- **Копирование** - копируйте факты в буфер обмена
-- **Уведомления** - toast уведомления для обратной связи
+   ```bash
+   npm install
+   ```
 
-## 🏗️ Архитектура
+3. **Run the development server**
 
-### Структура проекта
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🏗️ Project Structure
 
 ```
 src/
-├── app/                    # Next.js App Router
-│   ├── layout.tsx         # Корневой layout с Redux Provider
-│   ├── page.tsx           # Главная страница
-│   └── providers.tsx      # Redux Provider
-├── components/            # React компоненты
-│   ├── ui/               # shadcn/ui компоненты
-│   ├── NumberFactForm.tsx # Форма поиска с RTK Query
-│   ├── NumberFactResult.tsx # Отображение результатов
-│   ├── ThemeToggle.tsx   # Переключатель темы
-│   ├── FavoritesList.tsx # Список избранного
-│   └── HistoryList.tsx   # История поиска
-└── lib/                  # Утилиты и конфигурация
-    ├── store.ts          # Redux store
-    ├── hooks.ts          # Типизированные Redux hooks
-    ├── services/         # RTK Query API services
-    ├── features/         # Redux slices
-    └── types.ts          # TypeScript типы
+├── app/
+│   ├── [locale]/           # Internationalized routes
+│   │   ├── layout.tsx      # Root layout with i18n
+│   │   └── page.tsx        # Main page
+│   ├── globals.css         # Global styles
+│   └── providers.tsx       # Redux provider
+├── components/
+│   ├── ui/                 # shadcn/ui components
+│   ├── NumberFactForm.tsx  # Main form component
+│   ├── NumberFactResult.tsx # Result display
+│   ├── FavoritesList.tsx   # Favorites management
+│   ├── HistoryList.tsx     # Search history
+│   ├── ThemeToggle.tsx     # Theme switcher
+│   ├── LangSelect.tsx      # Language selector
+│   └── LoadingSpinner.tsx  # Loading component
+├── lib/
+│   ├── api.ts              # API utilities
+│   ├── storage.ts          # Local storage utilities
+│   └── validation.ts       # Form validation
+├── redux/
+│   ├── store.ts            # Redux store configuration
+│   └── features/           # Redux slices
+│       ├── themeSlice.ts   # Theme state
+│       ├── favoritesSlice.ts # Favorites state
+│       ├── historySlice.ts # History state
+│       └── localeSlice.ts  # Locale state
+├── services/
+│   └── numberFactsApi.ts   # RTK Query API service
+├── types/
+│   └── index.ts            # TypeScript type definitions
+├── i18n/
+│   ├── config.ts           # i18n configuration
+│   └── index.ts            # i18n setup
+└── messages/               # Translation files
+    ├── en.json             # English translations
+    ├── ru.json             # Russian translations
+    └── uz.json             # Uzbek translations
 ```
 
-### Технологический стек
+## 🌍 Internationalization
 
-- **Frontend**: Next.js 15, React 18, TypeScript
-- **State Management**: Redux Toolkit, RTK Query
-- **Styling**: Tailwind CSS, shadcn/ui
-- **Icons**: Lucide React
-- **Notifications**: Sonner
-- **Build Tool**: Next.js (Turbopack)
+The app supports three languages:
 
-## 🚀 Быстрый старт
+- **English** (`/en`)
+- **Russian** (`/ru`)
+- **Uzbek** (`/uz`)
 
-### Предварительные требования
+Language switching is handled by the middleware, which automatically redirects the root path to the default locale.
 
-- Node.js 18+
-- npm или yarn
+## 🎨 Theming
 
-### Установка
+The app supports:
 
-```bash
-# Клонировать репозиторий
-git clone <repository-url>
-cd number-fact
+- **Light Theme**: Clean, bright interface
+- **Dark Theme**: Easy on the eyes
+- **System Theme**: Automatically follows system preference
 
-# Установить зависимости
-npm install
+## 📱 Usage
 
-# Запустить в режиме разработки
-npm run dev
+### Getting Number Facts
+
+1. **Enter a number** in the input field
+2. **Select a category**:
+   - **Trivia**: Interesting general facts
+   - **Math**: Mathematical properties
+   - **Date**: Date-related facts
+3. **Click "Find fact"** to get your fact
+4. **Use "Random number"** for surprise facts
+
+### Managing Favorites
+
+- **Add to favorites**: Click the heart icon on any fact
+- **View favorites**: Switch to the "Favorites" tab
+- **Remove from favorites**: Click the heart icon again
+- **Clear all**: Use the "Clear" button
+
+### Viewing History
+
+- **Search history**: Automatically saved
+- **View history**: Switch to the "History" tab
+- **Clear history**: Use the "Clear" button
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env.local` file:
+
+```env
+# API Configuration
+NEXT_PUBLIC_API_BASE_URL=https://numbersapi.com
+NEXT_PUBLIC_API_TIMEOUT=5000
+
+# App Configuration
+NEXT_PUBLIC_DEFAULT_LOCALE=en
+NEXT_PUBLIC_SUPPORTED_LOCALES=en,ru,uz
 ```
 
-### Доступные команды
+### Customization
 
-```bash
-npm run dev          # Запуск в режиме разработки
-npm run build        # Сборка для продакшена
-npm run start        # Запуск продакшен сборки
-npm run lint         # Проверка кода ESLint
-npm run type-check   # Проверка типов TypeScript
-```
+#### Adding New Languages
 
-## 📱 Использование
+1. Add locale to `src/i18n/config.ts`:
 
-### Поиск фактов
+   ```typescript
+   export const locales = ["en", "ru", "uz", "fr"] as const;
+   ```
 
-1. Выберите категорию (trivia, math, date)
-2. Введите число или включите "Случайное число"
-3. Нажмите "Найти факт"
-4. Результат появится ниже формы
+2. Create translation file `src/messages/fr.json`
 
-### Управление избранным
+3. Update locale names and flags in config
 
-- Нажмите на сердечко рядом с фактом, чтобы добавить в избранное
-- Перейдите на вкладку "Избранное" для просмотра сохраненных фактов
-- Используйте кнопки "Поделиться" и "Копировать" для распространения
+#### Adding New Fact Categories
 
-### История поиска
+1. Update `FactCategory` type in `src/types/index.ts`
+2. Add category to form options in `NumberFactForm.tsx`
+3. Add translations for the new category
 
-- Все ваши поиски автоматически сохраняются
-- Перейдите на вкладку "История" для просмотра
-- Очистите историю кнопкой "Очистить"
+## 🚀 Deployment
 
-## 🔧 Конфигурация
+### Vercel (Recommended)
 
-### Redux Store
+1. **Connect your repository** to Vercel
+2. **Set environment variables** in Vercel dashboard
+3. **Deploy** - Vercel will automatically build and deploy
 
-Store настроен с поддержкой:
+### Other Platforms
 
-- RTK Query для API запросов
-- DevTools для отладки
-- Автоматической сериализации
-
-### RTK Query
-
-API сервис настроен с:
-
-- Автоматическим кэшированием
-- Обработкой ошибок
-- Retry логикой
-- Оптимистичными обновлениями
-
-### Темы
-
-Поддерживаются три режима:
-
-- **Light** - светлая тема
-- **Dark** - темная тема
-- **System** - системные настройки
-
-## 🎨 Кастомизация
-
-### Добавление новых категорий
-
-1. Обновите тип `FactCategory` в `src/lib/types.ts`
-2. Добавьте новую категорию в компоненты
-3. Обновите API endpoints при необходимости
-
-### Изменение UI
-
-- Компоненты используют shadcn/ui - легко кастомизируются
-- Стили написаны на Tailwind CSS
-- Темы настраиваются в `globals.css`
-
-## 🧪 Тестирование
-
-### Структура тестов
-
-```
-__tests__/
-├── components/     # Тесты компонентов
-├── lib/           # Тесты утилит
-└── integration/   # Интеграционные тесты
-```
-
-### Запуск тестов
-
-```bash
-npm test           # Запуск всех тестов
-npm run test:watch # Тесты в режиме watch
-npm run test:coverage # Тесты с покрытием
-```
-
-## 📦 Развертывание
-
-### Vercel (рекомендуется)
+The app can be deployed to any platform that supports Next.js:
 
 ```bash
 npm run build
-# Загрузить на Vercel
+npm start
 ```
 
-### Другие платформы
+## 🧪 Development
+
+### Available Scripts
 
 ```bash
-npm run build
-npm run start
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint
+npm run type-check   # Run TypeScript check
 ```
 
-## 🤝 Вклад в проект
+### Code Quality
 
-1. Fork репозитория
-2. Создайте feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit изменения (`git commit -m 'Add amazing feature'`)
-4. Push в branch (`git push origin feature/amazing-feature`)
-5. Откройте Pull Request
+- **ESLint**: Code linting and formatting
+- **TypeScript**: Type safety and IntelliSense
+- **Prettier**: Code formatting (configured via ESLint)
 
-## 📄 Лицензия
+## 🤝 Contributing
 
-Этот проект лицензирован под MIT License - см. файл [LICENSE](LICENSE) для деталей.
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Commit your changes**: `git commit -m 'Add amazing feature'`
+4. **Push to the branch**: `git push origin feature/amazing-feature`
+5. **Open a Pull Request**
 
-## 🙏 Благодарности
+## 📄 License
 
-- [Numbers API](http://numbersapi.com/) - за предоставление API
-- [shadcn/ui](https://ui.shadcn.com/) - за прекрасные компоненты
-- [Redux Toolkit](https://redux-toolkit.js.org/) - за отличное управление состоянием
-- [Next.js](https://nextjs.org/) - за мощный React фреймворк
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **NumbersAPI**: For providing number facts (with fallback support)
+- **shadcn/ui**: For beautiful UI components
+- **next-intl**: For internationalization support
+- **Redux Toolkit**: For state management
+- **Tailwind CSS**: For styling
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+
+1. **Check the issues** on GitHub
+2. **Create a new issue** with detailed information
+3. **Contact the maintainers**
 
 ---
 
-**Создано с ❤️ для изучения интересных фактов о числах**
+**Made with ❤️ using Next.js, TypeScript, and modern web technologies**
