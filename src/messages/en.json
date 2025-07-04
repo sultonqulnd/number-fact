@@ -1,0 +1,83 @@
+{
+  "app": {
+    "title": "Number Facts",
+    "description": "Discover interesting facts about numbers",
+    "keywords": "numbers, facts, mathematics, interesting"
+  },
+  "navigation": {
+    "search": "Search",
+    "favorites": "Favorites",
+    "history": "History"
+  },
+  "form": {
+    "title": "Number Facts",
+    "description": "Choose a category and enter a number to learn an interesting fact about it.",
+    "category": "Category",
+    "categoryPlaceholder": "Select category",
+    "randomNumber": "Random number",
+    "number": "Number",
+    "numberPlaceholder": "Enter a number (e.g., 42)",
+    "submit": "Find fact",
+    "loading": "Searching..."
+  },
+  "categories": {
+    "trivia": "Interesting facts",
+    "math": "Mathematical facts",
+    "date": "Date facts"
+  },
+  "result": {
+    "title": "Search Result",
+    "description": "Interesting fact about number {number}.",
+    "number": "Number",
+    "category": "Category",
+    "fact": "Fact"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty": "You don't have any favorite facts yet",
+    "clear": "Clear",
+    "cleared": "Favorites cleared",
+    "remove": "Remove from favorites",
+    "added": "Added to favorites",
+    "removed": "Removed from favorites"
+  },
+  "history": {
+    "title": "Search History",
+    "empty": "Search history is empty",
+    "clear": "Clear",
+    "remove": "Remove from history",
+    "removed": "Removed from history",
+    "cleared": "History cleared"
+  },
+  "actions": {
+    "share": "Share",
+    "copy": "Copy",
+    "copied": "Fact copied",
+    "shared": "Fact shared",
+    "error": "Error occurred"
+  },
+  "info": {
+    "about": {
+      "title": "About the app",
+      "description": "Learn interesting facts about numbers with our app. Various categories are supported: interesting facts, mathematical facts, and date facts.",
+      "features": [
+        "Search by specific number",
+        "Random facts",
+        "Save to favorites",
+        "Search history"
+      ]
+    },
+    "categories": {
+      "title": "Categories",
+      "trivia": "Interesting facts",
+      "math": "Mathematical facts",
+      "date": "Date facts"
+    }
+  },
+  "theme": {
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "system": "System theme",
+    "toggle": "Toggle theme"
+  }
+}

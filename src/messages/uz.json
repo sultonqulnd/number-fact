@@ -1,0 +1,83 @@
+{
+  "app": {
+    "title": "Sonlar haqida faktlar",
+    "description": "Sonlar haqida qiziqarli faktlarni bilib oling",
+    "keywords": "sonlar, faktlar, matematika, qiziqarli"
+  },
+  "navigation": {
+    "search": "Qidirish",
+    "favorites": "Sevimlilar",
+    "history": "Tarix"
+  },
+  "form": {
+    "title": "Sonlar haqida faktlar",
+    "description": "Kategoriyani tanlang va sonni kiriting, uning haqida qiziqarli faktni bilib oling.",
+    "category": "Kategoriya",
+    "categoryPlaceholder": "Kategoriyani tanlang",
+    "randomNumber": "Tasodifiy son",
+    "number": "Son",
+    "numberPlaceholder": "Sonni kiriting (masalan: 42)",
+    "submit": "Faktni topish",
+    "loading": "Qidirilmoqda..."
+  },
+  "categories": {
+    "trivia": "Qiziqarli faktlar",
+    "math": "Matematik faktlar",
+    "date": "Sana faktlari"
+  },
+  "result": {
+    "title": "Qidiruv natijasi",
+    "description": "{number} soni haqida qiziqarli fakt.",
+    "number": "Son",
+    "category": "Kategoriya",
+    "fact": "Fakt"
+  },
+  "favorites": {
+    "title": "Sevimlilar",
+    "empty": "Sizda hali sevimli faktlar yo'q",
+    "clear": "Tozalash",
+    "cleared": "Sevimlilar tozalandi",
+    "remove": "Sevimlilardan olib tashlash",
+    "added": "Sevimlilarga qo'shildi",
+    "removed": "Sevimlilardan olib tashlandi"
+  },
+  "history": {
+    "title": "Qidiruv tarixi",
+    "empty": "Qidiruv tarixi bo'sh",
+    "clear": "Tozalash",
+    "remove": "Tarixdan olib tashlash",
+    "removed": "Tarixdan olib tashlandi",
+    "cleared": "Tarix tozalandi"
+  },
+  "actions": {
+    "share": "Ulashish",
+    "copy": "Nusxalash",
+    "copied": "Fakt nusxalandi",
+    "shared": "Fakt ulashildi",
+    "error": "Xatolik yuz berdi"
+  },
+  "info": {
+    "about": {
+      "title": "Ilova haqida",
+      "description": "Bizning ilovamiz yordamida sonlar haqida qiziqarli faktlarni bilib oling. Turli kategoriyalar qo'llab-quvvatlanadi: qiziqarli faktlar, matematik faktlar va sana faktlari.",
+      "features": [
+        "Aniq son bo'yicha qidirish",
+        "Tasodifiy faktlar",
+        "Sevimlilarga saqlash",
+        "Qidiruv tarixi"
+      ]
+    },
+    "categories": {
+      "title": "Kategoriyalar",
+      "trivia": "Qiziqarli faktlar",
+      "math": "Matematik faktlar",
+      "date": "Sana faktlari"
+    }
+  },
+  "theme": {
+    "light": "Yorug' mavzu",
+    "dark": "Qorong'i mavzu",
+    "system": "Tizim mavzusi",
+    "toggle": "Mavzuni almashtirish"
+  }
+}
